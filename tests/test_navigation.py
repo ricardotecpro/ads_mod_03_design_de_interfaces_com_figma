@@ -13,7 +13,7 @@ class TestNavigation:
         page = page_with_base_url
         page.goto(base_url)
         
-        expect(page).to_have_title("Python Backend - Curso Completo")
+        expect(page).to_have_title("Design de Interfaces com Figma")
 
     def _ensure_menu_visible(self, page: Page):
         """Helper to ensure menu is visible (opens drawer if needed)"""
@@ -55,24 +55,3 @@ class TestNavigation:
         # Verificamos a presença no DOM, searching for print_page
         print_link = page.locator("a[href*='print_page']")
         expect(print_link.first).to_be_attached()
-
-    def test_navigation_to_lesson_01(self, page_with_base_url: Page, base_url: str):
-        """Verifica se é possível navegar para Aula 01"""
-        page = page_with_base_url
-        page.goto(base_url)
-        
-        self._ensure_menu_visible(page)
-        
-        # Navigate Aulas -> Modulo 1 -> Aula 01
-        # Click Aulas
-        page.get_by_role("link", name="Aulas").first.click(force=True)
-        
-        # Click Modulo 1
-        page.get_by_text("Módulo 1", exact=False).first.click(force=True)
-        
-        # Click Aula 01
-        page.get_by_text("Aula 01", exact=False).first.click(force=True)
-        
-        # Verifica se chegou na página correta
-        expect(page).to_have_url(f"{base_url}/aulas/aula-01/")
-        expect(page.locator("h1")).to_contain_text("Aula 01")

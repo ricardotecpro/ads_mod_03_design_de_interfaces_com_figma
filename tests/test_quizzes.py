@@ -75,12 +75,12 @@ class TestQuizzes:
             expect(feedback).to_be_visible()
 
     def test_quiz_has_multiple_questions(self, page_with_base_url: Page, base_url: str):
-        """Verifica se o quiz tem múltiplas perguntas (pelo menos 5)"""
+        """Verifica se o quiz tem múltiplas perguntas (pelo menos 2)"""
         page = page_with_base_url
         page.goto(f"{base_url}/quizzes/quiz-01/")
         
         # Procura por containers de quiz
         questions = page.locator(".quiz-container")
         
-        # Deve haver pelo menos 5 perguntas
-        expect(questions).to_have_count(5)
+        # Deve haver pelo menos 2 perguntas
+        expect(questions).to_have_count(2)

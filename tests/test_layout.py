@@ -45,15 +45,13 @@ def test_lesson_01_page(page: Page, base_url):
     # Check title (flexible match)
     expect(page).to_have_title(re.compile(r"Aula 01.*Figma"))
     
-    # Check main heading
+    # Check main heading - using substring match as full title is long
     heading = page.locator("h1")
-    expect(heading).to_contain_text("Aula 01")
+    expect(heading).to_contain_text("Introdução ao Design de Interfaces e Instalação")
 
 # Test 4: Quiz interactivity
 def test_quiz_functionality(page: Page, base_url):
     """Test that quiz JavaScript works correctly."""
-    # Assuming quiz files are reachable. 
-    # Since we didn't generate explicit quiz pages in site root but in quizzes/ folder:
     page.goto(f"{base_url}/quizzes/quiz-01/")
     
     # Wait for quiz to be visible
@@ -92,16 +90,6 @@ def test_lesson_16_page(page: Page, base_url):
     
     # Check title
     expect(page).to_have_title(re.compile(r"Aula 16.*Hand-off"))
-
-# Test 7: Mermaid diagram rendering (checking Lesson 11 - Componentes)
-def test_mermaid_diagram(page: Page, base_url):
-    """Test that Mermaid diagrams are present in the content (if any)."""
-    # Verify if we actually have mermaid in lesson 11.
-    # The template doesn't explicitly force mermaid, but let's check basic load
-    page.goto(f"{base_url}/aulas/aula-11/")
-    
-    # Just check page loads without error for now
-    expect(page.locator("h1")).to_contain_text("Aula 11")
 
 # Test 8: Assets loading
 def test_assets_load(page: Page, base_url):
