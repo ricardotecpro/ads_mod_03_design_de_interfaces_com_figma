@@ -1,0 +1,164 @@
+site_name: Design de Interfaces com Figma
+site_url: https://ricardotecpro.github.io/ads_mod_03_design_de_interfaces_com_figma
+repo_url: https://github.com/ricardotecpro/ads_mod_03_design_de_interfaces_com_figma
+repo_name: ricardotecpro/ads_mod_03_design_de_interfaces_com_figma
+theme:
+  name: material
+  language: pt-BR
+  favicon: assets/images/figma-logo.svg
+  logo: assets/images/figma-logo.svg
+  custom_dir: overrides
+  features:
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.expand
+    - navigation.top
+    - navigation.footer
+    - navigation.indexes
+    - toc.follow
+    - content.code.copy
+    - content.code.annotate
+    - search.suggest
+    - search.highlight
+  palette:
+    - scheme: slate
+      primary: indigo
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: Mudar para modo claro
+    - scheme: default
+      primary: indigo
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: Mudar para modo escuro
+  icon:
+    repo: fontawesome/brands/github
+
+markdown_extensions:
+  - pymdownx.critic
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.details
+  - pymdownx.keys
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - footnotes
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - pymdownx.snippets:
+      base_path: docs
+
+plugins:
+  - mkdocs-revealjs
+  - search:
+      lang: pt
+  - mkdocs-jupyter
+  - glightbox
+  - mkdocs_quiz
+  - git-authors:
+      show_contribution: true
+      show_line_count: true
+      count_empty_lines: false
+      fallback_to_empty: false
+      sort_authors_by: contribution
+      authorship_threshold_percent: 10
+      exclude:
+        - index.md
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: datetime
+  - macros
+  - mkdocs-video
+  - termynal:
+      title: shell
+      buttons: macos
+      prompt_literal_start:
+        - "$"
+  - rss:
+      match_path: .*
+      date_from_meta:
+        datetime_format: '%Y-%m-%d %H:%M:%S'
+  - print-site:
+      add_to_navigation: false
+      print_page_rel_path: 'print_page.md'
+      print_page_title: 'Versão para Impressão'
+      add_print_site_banner: false
+      enumerate_headings: false
+      enumerate_figures: false
+
+hooks:
+  - hooks/copy_slides.py
+
+extra_css:
+  - assets/css/quiz.css
+  - assets/css/home.css
+  - assets/css/extra.css
+
+extra_javascript:
+  - assets/js/quiz.js
+  - https://unpkg.com/mermaid@10.9.1/dist/mermaid.min.js
+  - assets/js/mermaid-init.js
+  - assets/js/custom_termynal.js
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/ricardotecpro
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/ricardotecpro
+    - icon: fontawesome/solid/globe
+      link: https://ricardotecpro.github.io/
+  version:
+    provider: mike
+    default: estavel
+
+nav:
+  - Home: index.md
+  - Aulas:
+      - aulas/index.md
+      - Módulo 1 – Fundamentos:
+        - 'Aula 01 - Introdução ao Design de Interfaces e Instalação': aulas/aula-01.md
+        - 'Aula 02 - Explorando a Interface do Figma': aulas/aula-02.md
+        - 'Aula 03 - Ferramentas Básicas: Formas e Vetores': aulas/aula-03.md
+        - 'Aula 04 - Manipulação de Textos e Tipografia': aulas/aula-04.md
+      - Módulo 2 – Cores e Estilos:
+        - 'Aula 05 - Teoria das Cores e Aplicação no Figma': aulas/aula-05.md
+        - 'Aula 06 - Gerenciamento de Estilos (Styles)': aulas/aula-06.md
+        - 'Aula 07 - Trabalhando com Imagens e Máscaras': aulas/aula-07.md
+      - Módulo 3 – Layout e Estrutura:
+        - 'Aula 08 - Auto Layout: Fundamentos': aulas/aula-08.md
+        - 'Aula 09 - Auto Layout: Avançado e Responsividade': aulas/aula-09.md
+        - 'Aula 10 - Constraints e Grids': aulas/aula-10.md
+      - Módulo 4 – Componentes e Sistemas:
+        - 'Aula 11 - Componentes Básicos e Instâncias': aulas/aula-11.md
+        - 'Aula 12 - Variantes e Propriedades de Componentes': aulas/aula-12.md
+        - 'Aula 13 - Bibliotecas e Design Systems': aulas/aula-13.md
+      - Módulo 5 – Prototipagem:
+        - 'Aula 14 - Prototipagem: Navegação e Interações': aulas/aula-14.md
+        - 'Aula 15 - Animações (Smart Animate) e Microinterações': aulas/aula-15.md
+        - 'Aula 16 - Hand-off para Desenvolvedores e Exportação': aulas/aula-16.md
+  - Materiais:
+      - materiais.md
+      - Slides: slides/index.md
+      - Exercícios: exercicios/index.md
+      - Quizzes:
+          - quizzes/index.md
+      - Projetos: projetos/
+      - Setups: setups/index.md
+  - Impressão: print_page.md
