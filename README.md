@@ -1,6 +1,6 @@
-# 🐍 Python Backend - Curso Completo
+# 🐍 Python Backend - Curso
 
-Curso completo de Python do zero ao avançado, com foco em desenvolvimento backend.
+Curso de Python do zero ao avançado, com foco em desenvolvimento backend.
 
 ## 🎯 Sobre o Curso
 

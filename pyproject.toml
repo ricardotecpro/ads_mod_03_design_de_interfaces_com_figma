@@ -1,7 +1,7 @@
 [project]
-name = "ads-spec-backend-com-python"
+name = "ads_mod_03_design_de_interfaces_com_figma"
 version = "1.0.0"
-description = "Curso Completo de Python - Backend"
+description = "ads_mod_03_design_de_interfaces_com_figma"
 authors = [
     {name = "Ricardo", email = "ricardo@example.com"}
 ]
