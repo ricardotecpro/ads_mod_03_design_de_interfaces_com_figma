@@ -22,14 +22,14 @@ theme:
     - search.highlight
   palette:
     - scheme: slate
-      primary: indigo
-      accent: amber
+      primary: deep purple
+      accent: deep purple
       toggle:
         icon: material/weather-night
         name: Mudar para modo claro
     - scheme: default
-      primary: indigo
-      accent: amber
+      primary: deep purple
+      accent: deep purple
       toggle:
         icon: material/weather-sunny
         name: Mudar para modo escuro
