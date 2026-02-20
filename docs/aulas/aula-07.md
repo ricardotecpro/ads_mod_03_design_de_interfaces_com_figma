@@ -7,27 +7,47 @@
 
 ## Conteúdo Teórico
 
-### O que é?
-Explicação teórica sobre o tema da aula...
+### Imagens Raster (Bitmap)
+Imagens compostas por pixels. Diferente dos vetores, elas perdem qualidade ao serem ampliadas.
 
-### Como funciona no Figma?
-Passo a passo de como utilizar a ferramenta ou técnica...
+```mermaid
+graph LR
+    P[Pixel Grid] --> |Zoom In| IMG[Imagem Distorcida]
+    P --> |Resolução Alta| CLR[Imagem Nítida]
+    style P fill:#f9f
+```
 
-1.  Passo 1...
-2.  Passo 2...
-3.  Passo 3...
+- **Tamanho vs Resolução:** A densidade (PPI) é crucial para telas Retina.
+- **Máscaras:** Ocultar partes de uma imagem de forma não-destrutiva.
+- **Formatos:** PNG (transparência), JPG (fotos), WebP (moderno/leve).
 
-!!! tip "Dica de Pro"
-    Utilize atalhos de teclado para agilizar seu fluxo de trabalho.
+!!! info "Conceito"
+    A transparência é controlada pelo **Canal Alpha**. No Figma, podemos usar máscaras de qualquer forma geométrica ou vetor para "cortar" imagens.
+
+### Manipulação e Retoque
+Filtros de ajuste rápidos diretamente no Figma.
+
+```terminal
+$ # Ajustes de Imagem
+$ Exposure: Brilho/Luz
+$ Contrast: Diferença entre claros e escuros
+$ Saturation: Intensidade da cor
+```
+
+!!! tip "Dica"
+    Para retoques avançados de pele ou remoção de objetos, utilize o **GIMP** ou **Krita** (Open Source) antes de importar para o Figma.
 
 ## Em Prática
-Vamos aplicar o que aprendemos criando...
+Vamos importar uma foto, aplicar um ajuste de luminância e criar uma máscara de recorte hexagonal para um perfil de usuário.
+
+!!! warning "Atenção"
+    Cuidado com o tamanho dos arquivos! Imagens muito pesadas deixam o arquivo do Figma lento e o carregamento do site/app demorado.
 
 ## Resumo
 Nesta aula aprendemos sobre:
-- Conceito A
-- Conceito B
-- Conceito C
+- Diferenças técnicas entre Bitmap e Vetor.
+- Uso de máscaras no Figma.
+- Otimização e softwares Open Source.
 
 ---
 ## 🎯 Próximos Passos
@@ -38,7 +58,7 @@ Nesta aula aprendemos sobre:
     -   [Ver Slides da Aula](../slides/slide-07.html)
 
 -   :material-school: **Quiz**
-    -   [Responder Quiz](../quizzes/quiz-07.html)
+    -   [Responder Quiz](../quizzes/quiz-07.md)
 
 -   :material-dumbbell: **Exercícios**
     -   [Lista de Exercícios](../exercicios/exercicio-07.md)

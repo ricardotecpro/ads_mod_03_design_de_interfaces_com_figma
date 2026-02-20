@@ -7,27 +7,50 @@
 
 ## Conteúdo Teórico
 
-### O que é?
-Explicação teórica sobre o tema da aula...
+### Conhecendo a Interface do Figma
+A interface do Figma é dividida em quatro áreas principais que facilitam o fluxo de trabalho colaborativo.
 
-### Como funciona no Figma?
-Passo a passo de como utilizar a ferramenta ou técnica...
+```mermaid
+graph LR
+    L[Barra Superior] --- C[Tela Central]
+    L --- Layers[Painel de Camadas]
+    L --- Props[Painel de Propriedades]
+    Layers --> |Esquerda| C
+    Props --> |Direita| C
+```
 
-1.  Passo 1...
-2.  Passo 2...
-3.  Passo 3...
+- **Barra Superior:** Ferramentas de seleção, formas, caneta e texto.
+- **Painel de Camadas (Esquerdo):** Organização de páginas, assets e camadas.
+- **Tela Central (Canvas):** Onde o design acontece.
+- **Painel de Propriedades (Direito):** Ajustes de dimensão, cor, efeitos e interações.
 
-!!! tip "Dica de Pro"
-    Utilize atalhos de teclado para agilizar seu fluxo de trabalho.
+!!! info "Conceito"
+    O Figma é baseado em **frames**. Pense neles como as "telas" do seu aplicativo ou as "artboards" do seu design.
+
+### Atalhos Essenciais
+Dominar atalhos é o que diferencia designers produtivos.
+
+```terminal
+$ # Atalhos de Navegação
+$ Espaço + Clique: Pan (Mover tela)
+$ Ctrl + Scroll: Zoom In/Out
+$ Alt + L: Recolher todas as camadas
+```
+
+!!! tip "Dica"
+    Use o atalho `Ctrl + /` para abrir a barra de busca rápida e encontrar qualquer ferramenta ou plugin instantaneamente.
 
 ## Em Prática
-Vamos aplicar o que aprendemos criando...
+Vamos criar nosso primeiro **Frame** de iPhone e organizar três camadas simples: um retângulo (Fundo), um círculo (Avatar) e um Texto (Nome).
+
+!!! warning "Atenção"
+    Mantenha suas camadas nomeadas desde o primeiro dia. "Rectangle 45" não ajuda ninguém no futuro!
 
 ## Resumo
 Nesta aula aprendemos sobre:
-- Conceito A
-- Conceito B
-- Conceito C
+- Divisão da interface do Figma.
+- Navegação fluida no Canvas.
+- Atalhos de produtividade básica.
 
 ---
 ## 🎯 Próximos Passos
@@ -38,7 +61,7 @@ Nesta aula aprendemos sobre:
     -   [Ver Slides da Aula](../slides/slide-02.html)
 
 -   :material-school: **Quiz**
-    -   [Responder Quiz](../quizzes/quiz-02.html)
+    -   [Responder Quiz](../quizzes/quiz-02.md)
 
 -   :material-dumbbell: **Exercícios**
     -   [Lista de Exercícios](../exercicios/exercicio-02.md)

@@ -7,27 +7,48 @@
 
 ## Conteúdo Teórico
 
-### O que é?
-Explicação teórica sobre o tema da aula...
+### Bibliotecas e Design Systems
+Um Design System é a "fonte da verdade" de uma empresa. Ele vai além de componentes visuais, incluindo documentação, tom de voz e regras de uso.
 
-### Como funciona no Figma?
-Passo a passo de como utilizar a ferramenta ou técnica...
+```mermaid
+graph TD
+    DS[Design System] --> F[Fundamentos: Cores, Tipografia]
+    DS --> C[Componentes: Botões, Inputs]
+    DS --> P[Padrões: Layouts, UX]
+    DS --> D[Documentação: Como usar]
+```
 
-1.  Passo 1...
-2.  Passo 2...
-3.  Passo 3...
+- **Bibliotecas de Equipe:** Publique seus estilos e componentes para que outros arquivos possam usá-los.
+- **Tokens de Design:** Valores semânticos que ligam o design ao código (ex: `color-primary-main`).
+- **Escalabilidade:** Permite que centenas de designers e desenvolvedores trabalhem no mesmo produto com consistência.
 
-!!! tip "Dica de Pro"
-    Utilize atalhos de teclado para agilizar seu fluxo de trabalho.
+!!! info "Conceito"
+    Design System não é um projeto com fim. É um **produto vivo** que cresce e evolui conforme a necessidade do negócio e dos usuários.
+
+### Ecossistema de Apoio
+Designers não criam tudo do zero. Usamos recursos externos para acelerar o processo.
+
+```terminal
+$ # Recursos Digitais
+$ Imagens: Unsplash, Pexels
+$ Ícones: FontAwesome, Lucide
+$ Ilustrações: Humaaans, Undraw
+```
+
+!!! tip "Dica"
+    Ao usar bancos de imagens, procure por fotos que tenham a mesma iluminação e estilo visual para manter a unidade do seu Design System.
 
 ## Em Prática
-Vamos aplicar o que aprendemos criando...
+Vamos criar uma biblioteca de ícones pictográficos e organizar nosso primeiro "Mini Design System" com cores, fontes e 3 componentes básicos.
+
+!!! warning "Atenção"
+    Um Design System sem documentação é apenas um arquivo de UI Kit. Explique o **PORQUÊ** das decisões, não apenas o como.
 
 ## Resumo
 Nesta aula aprendemos sobre:
-- Conceito A
-- Conceito B
-- Conceito C
+- Conceito de Design System vs UI Kit.
+- Publicação de bibliotecas no Figma.
+- Integração de elementos de apoio (ícones e imagens).
 
 ---
 ## 🎯 Próximos Passos

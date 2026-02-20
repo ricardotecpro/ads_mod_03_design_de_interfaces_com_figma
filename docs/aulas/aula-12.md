@@ -7,27 +7,50 @@
 
 ## Conteúdo Teórico
 
-### O que é?
-Explicação teórica sobre o tema da aula...
+### Variantes e Propriedades
+Variantes permitem organizar componentes similares em um único contêiner. Por exemplo, um botão com estados "Default", "Hover" e "Disabled".
 
-### Como funciona no Figma?
-Passo a passo de como utilizar a ferramenta ou técnica...
+```mermaid
+graph LR
+    B[Component Set: Botão] --> V1[Variante: Primário]
+    B --> V2[Variante: Secundário]
+    B --> V3[Variante: Ghost]
+    V1 --> S1[Estado: Default]
+    V1 --> S2[Estado: Hover]
+```
 
-1.  Passo 1...
-2.  Passo 2...
-3.  Passo 3...
+- **Component Sets:** O contêiner que agrupa as variantes.
+- **Properties:** Atributos que você define (Cor, Tamanho, Ícone Sim/Não).
+- **Boolean Properties:** Ligar ou desligar a visibilidade de uma camada com um clique.
 
-!!! tip "Dica de Pro"
-    Utilize atalhos de teclado para agilizar seu fluxo de trabalho.
+!!! info "Conceito"
+    Variantes limpam seu painel de Assets. Em vez de ter 20 botões diferentes, você tem 1 botão com menus de configuração.
+
+### Tipos de Propriedades
+Organize como você interage com seus componentes no painel direito.
+
+```terminal
+$ # Configuração de Propriedades
+$ Variant: Troca entre visuais diferentes
+$ Boolean: Alterna visibilidade (True/False)
+$ Text: Permite editar o texto diretamente no painel
+$ Content: Troca instâncias de ícones
+```
+
+!!! tip "Dica"
+    Use nomes lógicos para suas propriedades. Em vez de `Property 1`, use `Status` ou `Type`. Isso facilita a compreensão de outros designers.
 
 ## Em Prática
-Vamos aplicar o que aprendemos criando...
+Vamos criar um componente de "Input de Texto" com variantes para os estados: Vazio, Preenchido e Com Erro.
+
+!!! warning "Atenção"
+    Não exagere nas variantes! Se você tiver milhares de combinações para um único componente, talvez seja melhor dividi-lo em componentes menores.
 
 ## Resumo
 Nesta aula aprendemos sobre:
-- Conceito A
-- Conceito B
-- Conceito C
+- Organização com Component Sets.
+- Criação de propriedades booleanas e de texto.
+- Simplificação da biblioteca de design.
 
 ---
 ## 🎯 Próximos Passos
@@ -38,7 +61,7 @@ Nesta aula aprendemos sobre:
     -   [Ver Slides da Aula](../slides/slide-12.html)
 
 -   :material-school: **Quiz**
-    -   [Responder Quiz](../quizzes/quiz-12.html)
+    -   [Responder Quiz](../quizzes/quiz-12.md)
 
 -   :material-dumbbell: **Exercícios**
     -   [Lista de Exercícios](../exercicios/exercicio-12.md)

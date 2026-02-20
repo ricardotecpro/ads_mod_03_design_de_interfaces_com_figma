@@ -7,27 +7,52 @@
 
 ## Conteúdo Teórico
 
-### O que é?
-Explicação teórica sobre o tema da aula...
+### Teoria das Cores na Prática
+As cores evocam emoções e ajudam na usabilidade. Entender o círculo cromático é essencial para criar paletas harmoniosas.
 
-### Como funciona no Figma?
-Passo a passo de como utilizar a ferramenta ou técnica...
+```mermaid
+graph TD
+    C[Esquemas de Cores] --> Mono[Monocromático]
+    C --> Ana[Análogo]
+    C --> Com[Complementar]
+    C --> Tri[Tríade]
+    style Mono fill:#e0f7fa
+    style Ana fill:#b2ebf2
+    style Com fill:#4dd0e1
+    style Tri fill:#00bcd4
+```
 
-1.  Passo 1...
-2.  Passo 2...
-3.  Passo 3...
+- **Sistemas de Cores:** RGB (Digital), CMYK (Impressão) e HEX (Código).
+- **Psicologia das Cores:** Azul (Confiança), Vermelho (Urgência/Erro), Verde (Sucesso).
+- **Contraste:** Garanta que o texto seja legível sobre o fundo (Padrões WCAG).
 
-!!! tip "Dica de Pro"
-    Utilize atalhos de teclado para agilizar seu fluxo de trabalho.
+!!! info "Conceito"
+    O contraste não é apenas sobre a cor, mas sobre a diferença de luminância. Use ferramentas de inspeção para garantir a acessibilidade.
+
+### Aplicação no Figma
+Trabalhando com preenchimentos (Fill) e contornos (Stroke).
+
+```terminal
+$ # Comandos de Cor
+$ I: Conta-gotas (Eye Dropper)
+$ Alt + Ctrl + C: Copiar Cor/Estilo
+$ Alt + Ctrl + V: Colar Cor/Estilo
+```
+
+!!! tip "Dica"
+    Ao criar uma interface, use a regra 60-30-10: 60% cor primária (neutra), 30% cor secundária e 10% cor de destaque (CTA).
 
 ## Em Prática
-Vamos aplicar o que aprendemos criando...
+Vamos criar uma paleta de cores para um aplicativo de saúde, utilizando harmonia análoga e testando o contraste.
+
+!!! warning "Atenção"
+    Sempre teste seu design em diferentes telas. Uma cor que parece ótima no seu monitor pode ficar apagada em um celular barato!
 
 ## Resumo
 Nesta aula aprendemos sobre:
-- Conceito A
-- Conceito B
-- Conceito C
+- Círculo cromático e harmonias.
+- Modelos de cores digitais.
+- Acessibilidade e contraste.
 
 ---
 ## 🎯 Próximos Passos
@@ -38,7 +63,7 @@ Nesta aula aprendemos sobre:
     -   [Ver Slides da Aula](../slides/slide-05.html)
 
 -   :material-school: **Quiz**
-    -   [Responder Quiz](../quizzes/quiz-05.html)
+    -   [Responder Quiz](../quizzes/quiz-05.md)
 
 -   :material-dumbbell: **Exercícios**
     -   [Lista de Exercícios](../exercicios/exercicio-05.md)

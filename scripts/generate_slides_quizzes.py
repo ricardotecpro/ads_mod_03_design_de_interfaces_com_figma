@@ -134,10 +134,13 @@ def generate_all_slides():
                     cleaned_lines = [line for line in lines if not line.strip().startswith('<!-- _class:')]
                     content = '\n'.join(cleaned_lines)
             
-            # 3. Escrever Markdown runtime em docs/slides/
+            # 3. Converter atalhos (ex: //f para fragments)
+            content = content.replace('//f', '<!-- .element: class="fragment" -->')
+            
+            # 4. Escrever Markdown runtime em docs/slides/
             dst_md_path.write_text(content, encoding='utf-8')
             
-            # 4. Gerar HTML referenciando este markdown
+            # 5. Gerar HTML referenciando este markdown
             html_content = generate_slide_html(i)
             html_path.write_text(html_content, encoding='utf-8')
         else:
